@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jrS-HO-KHy">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="x5Z-Wz-DUG">
+            <objects>
+                <viewController id="jrS-HO-KHy" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vpg-4Y-RIM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-PG-NqT">
+                                <rect key="frame" x="16" y="386" width="288" height="78"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkP-Kx-qxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="didTapStart:" destination="jrS-HO-KHy" eventType="touchUpInside" id="AAd-dV-oeU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8e-1Q-tzo">
+                                        <rect key="frame" x="0.0" y="44" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="didTapReset:" destination="jrS-HO-KHy" eventType="touchUpInside" id="hCv-ds-WsD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7X-wO-a6s" customClass="CircleVisualizer" customModule="CircleVisualizer">
+                                <rect key="frame" x="28" y="36" width="264" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r7X-wO-a6s" secondAttribute="height" multiplier="1:1" id="fFD-qa-llk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradationColor0">
+                                        <color key="value" red="0.20392156859999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineCapRaw">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradationColor2">
+                                        <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradationColor3">
+                                        <color key="value" red="0.89800000189999996" green="0.17048825288929856" blue="0.16959848481227227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumLength">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradationColor1">
+                                        <color key="value" red="0.94117647410000005" green="0.94117647410000005" blue="0.94117647410000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3jt-ou-xbE" firstAttribute="trailing" secondItem="v1e-PG-NqT" secondAttribute="trailing" constant="16" id="5cj-o9-SEQ"/>
+                            <constraint firstItem="3jt-ou-xbE" firstAttribute="bottom" secondItem="v1e-PG-NqT" secondAttribute="bottom" constant="16" id="SP2-zk-S0d"/>
+                            <constraint firstItem="r7X-wO-a6s" firstAttribute="leading" secondItem="3jt-ou-xbE" secondAttribute="leading" constant="28" id="WNI-Rw-N2f"/>
+                            <constraint firstItem="v1e-PG-NqT" firstAttribute="leading" secondItem="3jt-ou-xbE" secondAttribute="leading" constant="16" id="gFc-Hm-c9y"/>
+                            <constraint firstItem="r7X-wO-a6s" firstAttribute="top" secondItem="3jt-ou-xbE" secondAttribute="top" constant="16" id="q1C-Pr-oZw"/>
+                            <constraint firstItem="3jt-ou-xbE" firstAttribute="trailing" secondItem="r7X-wO-a6s" secondAttribute="trailing" constant="28" id="qiu-WQ-TCb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3jt-ou-xbE"/>
+                    </view>
+                    <connections>
+                        <outlet property="circle" destination="r7X-wO-a6s" id="0am-4F-UzB"/>
+                        <outlet property="resetButton" destination="m8e-1Q-tzo" id="SKl-Vm-gqM"/>
+                        <outlet property="startButton" destination="nkP-Kx-qxh" id="Msn-al-vbU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMB-cs-qon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="-8"/>
+        </scene>
+    </scenes>
+</document>
